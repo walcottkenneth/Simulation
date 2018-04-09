@@ -13,7 +13,7 @@ void puzzles(int x) {
     char ans;
     cout << "Jimmy's mother had three children. The first was called april and the second was called May. What was the name of the third?\n"
     toupper(ans);
-    if(ans != JIMMY) {
+    if(ans != 'JIMMY') {
       wrong_ans();
       score = score - 10; //we can change how many points the players looses depending on the difficulty of the question
     }
