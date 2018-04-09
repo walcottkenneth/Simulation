@@ -3,6 +3,13 @@
 using namespace std;
 const int MAX_Y, MAX_X = 10;
 
+/*
+Location function creates the map that the user moves along. If done correctly,
+hopefully we can have a easy, medium, and hard setting in int main(), that would
+change the size of the map.
+*/
+// Just accepted how terrible of an idea this is, im going to have to switch it
+// out for something easier. Sorry.
 void location() {
 node* head;
 head->new node;
