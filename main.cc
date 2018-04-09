@@ -12,18 +12,20 @@ change the size of the map.
 // out for something easier. Sorry.
 void location() {
 node* head;
-head->new node;
+head = new node;
 node* temp = head;
 int h = 0;
 while(h<MAX_Y){
   for(int i= 0; i< MAX_X; i++){
     temp.right->new node;
+    node.left->temp;
     temp = temp->right;
     i++;
   }
   temp = head;
   if(temp.up == NULL){ 
     temp.up->new node;
+    node.down->temp;
     temp = temp->up;
     h++;
   }
