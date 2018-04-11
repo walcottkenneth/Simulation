@@ -10,8 +10,9 @@ void wrong_ans() {
 
 void puzzles(int x) {
   if (choice == 1) {
-    char ans;
+    string ans;
     cout << "Jimmy's mother had three children. The first was called april and the second was called May. What was the name of the third?\n"
+    ;
     toupper(ans);
     if(ans != 'JIMMY') {
       wrong_ans();
