@@ -4,7 +4,9 @@ using namespace std;
 void wrong_ans() {
   cout << "Sorry that was the wrong answer\n";
   }
-  
+ void correct_ans() {
+   cout << "Good Job!\n";
+ }
   
 //fucntion for puzzles/riddles
 
@@ -13,11 +15,14 @@ void puzzles(int x) {
     string ans;
     cout << "Jimmy's mother had three children. The first was called april and the second was called May. What was the name of the third?\n"
     ;
+    getline (cin, ans);
     toupper(ans);
     if(ans != 'JIMMY') {
       wrong_ans();
       score = score - 10; //we can change how many points the players looses depending on the difficulty of the question
-    }
+    else
+      correct_ans();
+      }
    }
     
   if(choice == 2) {
