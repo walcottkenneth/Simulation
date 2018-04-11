@@ -34,6 +34,7 @@ void location(int x, int y) {
 }
 
 //void puzzle(){}
+Simulation/puzzles.h
 
 unsigned struct* world;
 
