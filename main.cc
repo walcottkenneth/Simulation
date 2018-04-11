@@ -1,7 +1,7 @@
 #include<iostream>
 #include "lost.h"
 using namespace std;
-const int MAX_Y, MAX_X = 10; //hey o contributed :P - KM lolz
+const int MAX_Y, MAX_X = 10;
 
 /*
 Location function creates the map that the user moves along. If done correctly,
