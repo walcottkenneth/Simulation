@@ -58,14 +58,14 @@ int main() {
      *
      */
 
-  cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^
+  cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^" << endl;
   cout << "-------------------------------------" << endl;
   cout << "-x--x--- Lost in Los Angeles ---x--x-" << endl;
   cout << "-------------------------------------" << endl;
   cout << "<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<" << endl;
   cout << endl;
   string name = 'Player 1';
-  cout << "What is your name, " << name << "?" << endl
+  cout << "What is your name, " << name << "?" << endl;
   cin >> name;
   if (!cin) die();
   cout << "Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
