@@ -44,7 +44,7 @@ void wrong_ans() {
   
 //fucntion for puzzles/riddles
 
-void puzzles(int x) {
+int puzzles(int x, int score) {
   if (choice == 1) {
     string ans;
     cout << "Jimmy's mother had three children. The first was called April\n";
@@ -130,10 +130,10 @@ void puzzles(int x) {
   
     if(choice == 7) {
       string ans;
-      cout << "\n";
+      cout << "What starts with an E, but only has one letter in it?\n";
       getline.(cin, ans);
       toupper(ans);
-      if(ans != ) {
+      if(ans != 'ENVELOPE') {
         wrong_ans();
        // score = score - 10;
       }
