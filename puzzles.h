@@ -56,7 +56,8 @@ void puzzles(int x) {
     }
     
     if (choice == 5) {
-      
+      char ans;
+      cout << ""
     
 
 
