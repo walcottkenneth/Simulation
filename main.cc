@@ -58,21 +58,28 @@ int main() {
      *
      */
 
-  cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^" << endl;
-  cout << "-------------------------------------" << endl;
-  cout << "-x--x--- Lost in Los Angeles ---x--x-" << endl;
-  cout << "-------------------------------------" << endl;
-  cout << "<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<" << endl;
-  cout << endl;
-  string name = 'Player 1';
-  cout << "What is your name, " << name << "?" << endl;
-  cin >> name;
-  if (!cin) die();
-  cout << "Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
-  cout << "If you want to get out alive, follow my instructions and don't mess up. " << endl;
-  cout << "Your first task will be to visit the fortune teller." << endl;
-  cout << "However, her humble abode is hidden in the mall." << endl;
+    cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^" << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << " - x--x-- - Lost in Los Angeles -- -x--x - " << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<" << endl;
+    cout << endl;
+        
+    string name = "Player 1";
+    string h    = "Keller";
+    string ft   = "Sabrina";
+        
+    cout << "What is your name, " << name << " ? " << endl;
+    cin >> name;
+    if (!cin) die();
+    cout << endl;
+ 
+    cout << h << ": Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
+    
+    cout << h << ":Your fate is in the hands of the fortune teller, " << ft << "." endl;
+    cout << "Your first task will be to visit the fortune teller." << endl;
+    cout << "However, her humble abode is hidden in the mall." << endl;
   
-  cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
-  cout << "She will now tell your fortune based on your information." << endl;
+    cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
+    cout << "She will now tell your fortune based on your information." << endl;
 }
