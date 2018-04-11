@@ -33,7 +33,8 @@ void location(int x, int y) {
     return (x*MAX_Y+x);
 }
 
-//void puzzle(){}
+
+//beginning of puzzle function
 void wrong_ans() {
   cout << "Sorry that was the wrong answer\n";
   }
@@ -139,6 +140,8 @@ void puzzles(int x) {
       else 
         correct_ans();
     }
+    
+//end of puzzle function
 
 unsigned struct* world;
 
