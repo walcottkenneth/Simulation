@@ -47,7 +47,8 @@ void wrong_ans() {
 void puzzles(int x) {
   if (choice == 1) {
     string ans;
-    cout << "Jimmy's mother had three children. The first was called April and the second was called May. What was the name of the third?\n";
+    cout << "Jimmy's mother had three children. The first was called April\n";
+    cout << "and the second was called May. What was the name of the third?\n";
     getline (cin, ans);
     toupper(ans);
     if(ans != 'JIMMY') {
@@ -88,10 +89,10 @@ void puzzles(int x) {
     if (choice == 4) {
     string ans;
     cout << "Given that:\n"
-    cout << "1 bottle of drink + 1 bottle of drink + 1 bottle of drink = 30\n";
-    cout << "1 bottle of drink + 1 cheeseburger + 1 cheeseburger = 20\n";
-    cout << "1 cheeseburger + 2 glasses of drink + 2 glasses of drink = 9\n";
-    cout << "1 cheeseburger + 1 glass of drink × 1 bottle of drink = ?\n";
+    cout << "1 bottle of drink + 1 bottle of drink  + 1 bottle of drink  = $30\n";
+    cout << "1 bottle of drink + 1 cheeseburger     + 1 cheeseburger     = $20\n";
+    cout << "1 cheeseburger    + 2 glasses of drink + 2 glasses of drink = $9\n";
+    cout << "1 cheeseburger    + 1 glass of drink   × 1 bottle of drink  = $?\n";
     getline.(cin, ans);
     if (ans != '15') {
       wrong_ans();
@@ -177,7 +178,7 @@ int main() {
     string ft   = "Sabrina";
         
     cout << "What is your name, " << name << " ? " << endl;
-    cin >> name;
+    getline (cin, name);
     if (!cin) die();
     cout << endl;
  
