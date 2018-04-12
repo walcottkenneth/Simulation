@@ -172,10 +172,13 @@ int main() {
     cout << "-------------------------------------------" << endl;
     cout << "<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<" << endl;
     cout << endl;
-        hello
-    string name = "Player 1";
-    string h    = "Keller";
-    string ft   = "Sabrina";
+    
+    string name = "Player 1";   //player
+    string h    = "Keller";     //host
+    string ft   = "Sabrina";    //fortune teller
+    string kk   = "crystal";    //object
+    string m    = "zombie";     //monster
+        
         
     cout << "What is your name, " << name << " ? " << endl;
     getline (cin, name);
