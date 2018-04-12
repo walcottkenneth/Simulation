@@ -45,6 +45,9 @@ void wrong_ans() {
 //fucntion for puzzles/riddles
 
 int puzzles(int x, int score, int challenge) {
+  int choice = 0;
+  getline (cin, choice);
+  if (!cin) die();
   if (choice == 1) {
     string ans;
     cout << "Jimmy's mother had three children. The first was called April\n";
@@ -187,7 +190,7 @@ int main() {
  
     cout << h << ": Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
     cout << h << ": You must travel through the city to find " << kk << "s to find your way home." << endl;
-    cout << h << ": If you need help, just enter 'F' to visit the fortune teller, " << ft << "." endl;
+    cout << h << ": If you need help, just enter 'F' to visit the fortune teller, " << ft << "." << endl;
     cout << h << ": Your first task will be to visit the fortune teller." << endl;
     cout << "However, her humble abode is hidden in the mall." << endl;
   
