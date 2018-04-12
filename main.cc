@@ -44,7 +44,7 @@ void wrong_ans() {
   
 //fucntion for puzzles/riddles
 
-int puzzles(int x, int score) {
+int puzzles(int x, int score, int challenge) {
   if (choice == 1) {
     string ans;
     cout << "Jimmy's mother had three children. The first was called April\n";
