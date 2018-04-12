@@ -180,15 +180,15 @@ int main() {
     string m    = "zombie";     //monster
         
         
-    cout << "What is your name, " << name << " ? " << endl;
+    cout << "What is your name, " << name << " ?" << endl;
     getline (cin, name);
     if (!cin) die();
     cout << endl;
  
     cout << h << ": Welcome to Lost in L.A. " << name << "! My name is Keller." << endl;
-    
-    cout << h << ":Your fate is in the hands of the fortune teller, " << ft << "." endl;
-    cout << "Your first task will be to visit the fortune teller." << endl;
+    cout << h << ": You must travel through the city to find " << kk << "s to find your way home." << endl;
+    cout << h << ": Your fate is in the hands of the fortune teller, " << ft << "." endl;
+    cout << h << ": Your first task will be to visit the fortune teller." << endl;
     cout << "However, her humble abode is hidden in the mall." << endl;
   
     cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
