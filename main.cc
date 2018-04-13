@@ -143,6 +143,18 @@ int puzzles(int x, int score, int challenge) {
       else 
         correct_ans();
     }
+    if(choice == 8) {
+        string ans;
+        cout << "I have a key but no lock, a space but no room, you can enter\n";
+        cout << " but can't gp outside. What am I?\n";
+        getline.(cin, ans);
+        toupper(ans);
+        if(ans != 'A KEYBOARD' || ans != 'KEYBOARD')
+            wrong_ans();
+        else
+            correct_ans();
+    }
+    }
     
 //end of puzzle function
 
