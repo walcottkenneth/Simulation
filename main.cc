@@ -25,11 +25,8 @@ struct node{
 //  puzzles(int n){}
 };
 
-void die() {
-    cout << "Gone but not forgotten!\n";
-    cout << "R.I.P.\n";
-    exit(1);
-}
+void die();
+void win();
 
 int location(int x, int y) {
     while(x < 0) x+=MAX_X;
@@ -163,29 +160,10 @@ int puzzles(int x, int score, int challenge) {
     
 //end of puzzle function
 
-unsigned struct* world;
+
 
 
 int main() {
-    //srand(time(NULL));
-
-    //Set up NCURSES
-    initscr();
-    clear();
-    noecho();:wq
-    cbreak();
-
-    world = new unsigned struct[MAX_X * MAX_Y];
-    //cout << "^L";
-    game_on = false;
-    while(true) {
-    cout << "DIDDY SAYS TAKE THAT.\n";
-    int ch = getch();
-    if(ch == 'q' or ch == 'Q') die();
-    /* else if (ch ==
-     *
-     */
-
     cout << "^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^.^" << endl;
     cout << "-------------------------------------------" << endl;
     cout << " - x--x-- - Lost in Los Angeles -- -x--x - " << endl;
@@ -213,4 +191,77 @@ int main() {
   
     cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
     cout << "She will now tell your fortune based on your information." << endl;
+    //Set up NCURSES
+    initscr();
+    clear();
+    noecho();
+    cbreak();
+    if(MAX_Y < 1 || MAX_X < 1) {
+        mvprintw(0,0,"Error");
+        die();
+    }
+    node world[MAX_X * MAX_Y];
+    game_on = false;
+    MOVE_X = MAX_X/2;
+    MOVE_Y = MAX_Y/2;
+    while(true) {
+    int ch = getch();
+    clear();
+    if(ch == 'q' or ch == 'Q') die();
+    else if (ch == RIGHT) {
+        MOVE_Y++;
+        if(MOVE_Y >= MAX_Y) {
+            mvprintw(0,0, "Too far");
+            MOVE_Y = MAX_Y - 1;
+        }
+        mvprintw(0, 0, "moved right");
+    }
+    else if (ch == LEFT) {
+        MOVE_Y--;
+        if(MOVE_Y < 0) {
+            mvprintw(0,0, "Too far");
+            MOVE_Y = 0;
+        }
+        mvprintw(0, 0, "moved left");
+    }
+    else if (ch == UP) {
+        MOVE_X--;
+        if(MOVE_X < 0) {
+            mvprintw(0,0, "Too far");
+            MOVE_X = 0;
+        }
+        mvprintw(0, 0, "moved up");
+    }
+    else if (ch == DOWN) {
+        MOVE_X++;
+        if(MOVE_X >= MAX_X) {
+            mvprintw(0,0, "Too far");
+            MOVE_X = MAX_X - 1;
+        }
+        mvprintw(0, 0, "moved down");
+    }
+    else if (ch == ERR) { ; }
+    else if (ch == '\n') {game_on = !game_on;}
+    //I used this function to test place values on the map
+    //if(location(MOVE_X, MOVE_Y) == 5){
+    //    win();
+    //    break;
+    //}
+    else world[location(MOVE_X, MOVE_Y)];
+    }
+
+    clear();
+    refresh();
+    endwin();
+    system("clear");
+    return 0;
 }
+
+void die() {
+    mvprintw(0,0,"Gone but not forgotten!");
+    exit(1);
+}
+void win() {
+    mvprintw(0,0, "Youve won");
+}
+    
