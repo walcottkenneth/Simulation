@@ -25,7 +25,7 @@ struct node{
 //  puzzles(int n){}
 };
 
-void die();
+void die(); //declared at the bottom
 void win();
 
 int location(int x, int y) {
@@ -44,6 +44,9 @@ void wrong_ans() {
  }
   
 //fucntion for puzzles/riddles
+//if you wanted to use this as a function of the class 
+//you would have to switch this function from a int to:
+//     int world::puzzles(int, int, int);
 int puzzles(int x, int score, int challenge) {
   int choice = 0;
   getline (cin, choice);
@@ -189,57 +192,47 @@ int main() {
   
     cout << "You found Sabrina, the best fortune teller in all of L.A." << endl;
     cout << "She will now tell your fortune based on your information." << endl;
-    //Set up NCURSES
-    initscr();
+    initscr(); //Set up NCURSES
     clear();
-    noecho();
-    cbreak();
+    noecho(); //doesnt show the char inputs to the screen
+    cbreak(); //takes in the char values in real time
     if(MAX_Y < 1 || MAX_X < 1) {
         mvprintw(0,0,"Error");
         die();
     }
+    //creates the map of nodes
+    //if you wanted the access one of the nodes within the map
+    //use:        world[a].puzzle[b] = whatever;
     node world[MAX_X * MAX_Y];
     game_on = false;
-    MOVE_X = MAX_X/2;
+    MOVE_X = MAX_X/2; //Sets beginning position on the map
     MOVE_Y = MAX_Y/2;
     while(true) {
-    int ch = getch();
-    clear();
-    if(ch == 'q' or ch == 'Q') die();
+    int ch = getch(); //grabs char inputs
+    clear(); //clears the screen
+    if(ch == 'q' or ch == 'Q') die(); //press (q) to quit
     else if (ch == RIGHT) {
         MOVE_Y++;
-        if(MOVE_Y >= MAX_Y) {
-            mvprintw(0,0, "Too far");
-            MOVE_Y = MAX_Y - 1;
-        }
-        mvprintw(0, 0, "moved right");
+        if(MOVE_Y >= MAX_Y) { MOVE_Y = MAX_Y - 1; }
+        mvprintw(0, 0, "moved right");  // So you can see which way youve moved
     }
     else if (ch == LEFT) {
         MOVE_Y--;
-        if(MOVE_Y < 0) {
-            mvprintw(0,0, "Too far");
-            MOVE_Y = 0;
-        }
-        mvprintw(0, 0, "moved left");
+        if(MOVE_Y < 0) { MOVE_Y = 0; }
+        mvprintw(0, 0, "moved left");  // So you can see which way youve moved
     }
     else if (ch == UP) {
         MOVE_X--;
-        if(MOVE_X < 0) {
-            mvprintw(0,0, "Too far");
-            MOVE_X = 0;
-        }
-        mvprintw(0, 0, "moved up");
+        if(MOVE_X < 0) { MOVE_X = 0; }
+        mvprintw(0, 0, "moved up");  // So you can see which way youve moved
     }
     else if (ch == DOWN) {
         MOVE_X++;
-        if(MOVE_X >= MAX_X) {
-            mvprintw(0,0, "Too far");
-            MOVE_X = MAX_X - 1;
-        }
-        mvprintw(0, 0, "moved down");
+        if(MOVE_X >= MAX_X) { MOVE_X = MAX_X - 1; }
+        mvprintw(0, 0, "moved down"); // So you can see which way youve moved
     }
-    else if (ch == ERR) { ; }
-    else if (ch == '\n') {game_on = !game_on;}
+    else if (ch == ERR) { ; } //If nothing is inputted it does nothing
+    else if (ch == '\n') {game_on = !game_on;} // If you still want to make a pause
     //I used this function to test place values on the map
     //if(location(MOVE_X, MOVE_Y) == 5){
     //    win();
@@ -255,6 +248,7 @@ int main() {
     return 0;
 }
 
+//This functions are set to print in ncurses
 void die() {
     mvprintw(0,0,"Gone but not forgotten!");
     exit(1);
