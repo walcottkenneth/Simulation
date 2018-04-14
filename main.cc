@@ -44,8 +44,6 @@ void wrong_ans() {
  }
   
 //fucntion for puzzles/riddles
-//to make this work with the node.
-//void node::puzzles()
 int puzzles(int x, int score, int challenge) {
   int choice = 0;
   getline (cin, choice);
