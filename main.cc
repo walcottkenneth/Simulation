@@ -3,20 +3,26 @@
 #include<ctime>
 #include<cstdlib>
 #include<ncurses.h>
+#include<utility>
+#include<limits>
+#include<vector>
+#include<queue>
+#include<set>
 using namespace std;
 
-/* const int UP = 65;
- * const int DOWN = 66;
- * const int LEFT = 68;
- * const int RIGHT = 67;
- * const MAX_X, MAX_Y;
- *
- */
+const unsigned int UP = 65;
+const unsigned int DOWN = 66;
+const unsigned int RIGHT = 67;
+const unsigned int LEFT = 68;
+int MAX_X, MAX_Y;
+int MOVE_X, MOVE_Y;
 
 struct node{
     int piece;
     node() {}
     node(int new_piece): piece(new_piece){}
+    ~node(){}
+//  puzzles(int n){}
 };
 
 void die() {
@@ -25,15 +31,13 @@ void die() {
     exit(1);
 }
 
-void location(int x, int y) {
+int location(int x, int y) {
     while(x < 0) x+=MAX_X;
     while(y < 0) y+=MAX_Y;
     if(x >= MAX_X) x %= MAX_X;
     if(y >= MAX_Y) y %= MAX_Y;
-    return (x*MAX_Y+x);
+    return (x*MAX_Y+y);
 }
-
-
 //beginning of puzzle function
 void wrong_ans() {
   cout << "Sorry that was the wrong answer\n";
@@ -43,7 +47,8 @@ void wrong_ans() {
  }
   
 //fucntion for puzzles/riddles
-
+//to make this work with the node.
+//void node::puzzles()
 int puzzles(int x, int score, int challenge) {
   int choice = 0;
   getline (cin, choice);
