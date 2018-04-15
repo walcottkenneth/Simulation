@@ -94,7 +94,7 @@ class Puzzle{
 class puzzle1 : public Puzzle{
            string answer;
            void quiz(){
-                while(solved == false)
+                while(solved == false){
                       cout << "Jimmy's mother had three children. The first was called April\n";
                       cout << "and the second was called May. What was the name of the third?\n";
                       cin >> answer;
@@ -118,7 +118,7 @@ class puzzle1 : public Puzzle{
 class puzzle2 : public Puzzle{
            string answer;
            void quiz(){
-                while(solved == false)
+                while(solved == false){
                       cout <<  "You can hold it without using your hand or your arms. What is it?" << endl;
                       cin >> answer;
                       if(answer == "Your breath" || answer =="your breath"){
@@ -141,7 +141,7 @@ class puzzle2 : public Puzzle{
 class puzzle3 : public Puzzle{
            string answer;
            void quiz(){
-                while(solved == false)
+                while(solved == false){
                       cout <<  "Poor people have it. Rich people need it. If you eat it you die. What is it?" << endl;
                       cin >> answer;
                       if(answer == "Nothing" || answer =="nothing"){
@@ -164,7 +164,7 @@ class puzzle3 : public Puzzle{
 class puzzle4 : public Puzzle{
            string answer;
            void quiz(){
-                while(solved == false)
+                while(solved == false){
                       cout <<  "I have keys that fit no locks, a space but no room" << endl;
                       cout << "You can enter, but never leave. What am I?" << endl;
                       cin >> answer;
