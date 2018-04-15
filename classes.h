@@ -7,7 +7,66 @@ struct xy {     //This is a struct for loaction. It puts x and y
     int y = 0;
 };
 
-class Player {  //This class includes:
+string name = "Player 1";
+
+void die() {
+    cout << "  ,'*********',  " << endl;
+    cout << ".'             '." << endl;
+    cout << "|     R.I.P.    |" << endl;
+    cout << "| " << name << " |" << endl;
+    cout << "| Gone, but not |" << endl;
+    cout << "|   forgotten.  |" << endl;
+    cout << "^^^^^^^^^^^^^^^^^" << endl;
+    exit(1);
+}
+
+class Point {
+    int x = 5, y = 5;
+    public:
+    int MIN_X = 0;
+    int MAX_X = 10;
+    int MIN_Y = 0;
+    int MAX_Y = 10;
+    Point() {}
+    Point(int new_x, int new_y) {
+        x = new_x;
+        y = new_y;
+    }
+    int get_x() {
+        return x;
+    }
+    int get_y() {
+        return y;
+    }
+    void set_x(int k) {
+        x = k;
+    }
+    void set_y(int k) {
+        y = k;
+    }
+    void i_x(){
+        x++;
+        if (x > MAX_X) x = MAX_X;
+        if (x < MIN_X) x = MIN_X;
+    }
+    void d_x(){
+        x--;
+        if (x > MAX_X) x = MAX_X;
+        if (x < MIN_X) x = MIN_X;
+    }
+    void i_y(){
+        y++;
+        if (y > MAX_Y) y = MAX_Y;
+        if (y < MIN_Y) y = MIN_Y;
+    }
+    void d_y(){
+        y--;
+        if (y > MAX_Y) y = MAX_Y;
+        if (y < MIN_Y) y = MIN_Y;
+    }
+};
+
+/*class Player {  //This class includes:
                 // location struct, health, get/set location functions, and a damage function.
     private:
     xy location;
@@ -23,18 +82,7 @@ class Player {  //This class includes:
     void set_location(int new_x, int new_y) {//changes location, can be implemented into movement.
         location.x = new_x;
         location.y = new_y;}
-    void damage() {//damage function
-        health--;}
-                                             /*if (health <= 0){ //This will end the game, assuming you run out of health.
-                                              *                         //AJ, find and implement the die function.
-                                              *                                    die();
-                                              *                                        */
-    void heal() {//healing function
-        health++;}
-    int get_health() {//returns health
-        return health;}
-
-};
+};*/
 
 class Puzzle{
     protected://The location for the puzzles
@@ -43,7 +91,7 @@ class Puzzle{
     int health = 10;
            
     public:
-    xy get_placement() {//returns x and y
+    /*xy get_placement() {//returns x and y
         return placement;}  
     int get_x() {//returns x
         return placement.x;}
@@ -55,7 +103,7 @@ class Puzzle{
         if (new_y <= 0) new_y = 0;    //0 is min limit, 9 is max.
         else if (new_y >= 9) new_y = 9;
         placement.x = new_x;                                                                                                                                                                 placement.y = new_y;    
-    }
+    }*/
     void damage(){health--;}
     void heal(){health++;}
     int get_health(){return health;}
@@ -64,6 +112,7 @@ class Puzzle{
 
 
 class puzzle1 : public Puzzle{
+    public:
     string answer;
     void quiz(){
         while(solved == false) {
@@ -85,6 +134,7 @@ class puzzle1 : public Puzzle{
 };
 
 class puzzle2 : public Puzzle{
+    public:
     string answer;
     void quiz(){
         while(solved == false) {
@@ -107,6 +157,7 @@ class puzzle2 : public Puzzle{
 };
 
 class puzzle3 : public Puzzle{
+    public:
     string answer;
     void quiz(){
         while(solved == false) {
@@ -129,6 +180,7 @@ class puzzle3 : public Puzzle{
 };
 
 class puzzle4 : public Puzzle{
+    public:
     string answer;
     void quiz() {
         while(solved == false){
