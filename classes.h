@@ -33,7 +33,7 @@ class Player{//This class includes:
    
    }
    
-   void set_location(new_x, new_y){//changes location, can be implemented into movement.
+   void set_location(int new_x,int new_y){//changes location, can be implemented into movement.
       location.x = new_x;
       loaction.y = new_y;
    }
@@ -43,7 +43,8 @@ class Player{//This class includes:
     /*if (health <= 0){ //This will end the game, assuming you run out of health.
                         //AJ, find and implement the die function.
            die();
-    */}
+    }
+   */
    }
 
     void heal(){//healing function
