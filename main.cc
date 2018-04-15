@@ -49,13 +49,14 @@ void wrong_ans() {
 //     int world::puzzles(int, int, int);
 int puzzles(int x, int score, int challenge) {
   int choice = 0;
+  string ans = 0;
   getline (cin, choice);
   if (!cin) die();
   if (choice == 1) {
-    string ans;
     cout << "Jimmy's mother had three children. The first was called April\n";
     cout << "and the second was called May. What was the name of the third?\n";
-    getline (cin, ans);
+    cin >> ans;
+    if (!cin) die();
     toupper(ans);
     if(ans != 'JIMMY') {
       wrong_ans();
@@ -66,9 +67,9 @@ int puzzles(int x, int score, int challenge) {
    }
     
   if(choice == 2) {
-    string ans;
     cout << " You can hold it without using your hand or your arms. What is it?\n";
-    getline.(cin, ans);
+    cin >> ans;
+    if (!cin) die();
     toupper(ans);
     if(ans != 'YOUR BREATH' || ans != 'BREATH') {
       wrong_ans();
@@ -79,11 +80,11 @@ int puzzles(int x, int score, int challenge) {
     }
     
    if (choice == 3) {
-    string ans;
     cout << "234\n";
     cout << "23 \n";
     cout << "TIP:the answer is not 4\n";
-    getline.(cin, ans);
+    cin >> ans;
+    if (!cin) die();
     if(ans != '5') {
       wrong_ans();
      // score = score - 10;
@@ -93,13 +94,13 @@ int puzzles(int x, int score, int challenge) {
     }
     
     if (choice == 4) {
-    string ans;
     cout << "Given that:\n"
     cout << "1 bottle of drink + 1 bottle of drink  + 1 bottle of drink  = $30\n";
     cout << "1 bottle of drink + 1 cheeseburger     + 1 cheeseburger     = $20\n";
     cout << "1 cheeseburger    + 2 glasses of drink + 2 glasses of drink = $9\n";
     cout << "1 cheeseburger    + 1 glass of drink   × 1 bottle of drink  = $?\n";
-    getline.(cin, ans);
+    cin >> ans;
+    if (!cin) die();
     if (ans != '15') {
       wrong_ans();
      // score = score - 10;
@@ -109,9 +110,9 @@ int puzzles(int x, int score, int challenge) {
     }
     
     if (choice == 5) {
-      string ans;
       cout << "Poor people have it. Rich people need it. If you eat it you die. What is it?\n";
-      getline.(cin, ans);
+    cin >> ans;
+    if (!cin) die();
       toupper(ans);
       if(ans != 'NOTHING') {
         wrong_ans();
@@ -122,9 +123,9 @@ int puzzles(int x, int score, int challenge) {
     }
   
     if(choice == 6) {
-      string ans;
       cout << "What word becomes shorter after you add to letters to it?\n";
-      getline.(cin, ans);
+      cin >> ans;
+      if (!cin) die();
       toupper(ans);
       if(ans != 'SHORT') {
         wrong_ans();
@@ -135,9 +136,9 @@ int puzzles(int x, int score, int challenge) {
     }
   
     if(choice == 7) {
-      string ans;
       cout << "What starts with an E, but only has one letter in it?\n";
-      getline.(cin, ans);
+      cin >> ans;
+      if (!cin) die();
       toupper(ans);
       if(ans != 'ENVELOPE') {
         wrong_ans();
@@ -147,10 +148,10 @@ int puzzles(int x, int score, int challenge) {
         correct_ans();
     }
     if(choice == 8) {
-        string ans;
         cout << "I have a key but no lock, a space but no room, you can enter\n";
         cout << " but can't gp outside. What am I?\n";
-        getline.(cin, ans);
+        cin >> ans;
+        if (!cin) die();
         toupper(ans);
         if(ans != 'A KEYBOARD' || ans != 'KEYBOARD')
             wrong_ans();
