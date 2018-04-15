@@ -6,7 +6,7 @@ struct xy{//This is a struct for loaction. It puts x and y
            //together to make a single, function-returnable value
   int x = 0;
   int y = 0;
-}
+};
 
 
 
