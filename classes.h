@@ -19,7 +19,7 @@ class Player(){//This class includes:
     
    public:
    
-   int get_location(){ //returns both the x and y loc values
+   xy get_location(){ //returns both the x and y loc values
     return location;
    }
    
@@ -40,9 +40,38 @@ class Player(){//This class includes:
    
    void damage(){//damage function
     health--;
+    /*if (health <= 0){ //This will end the game, assuming you run out of health.
+                        //AJ, find and implement the die function.
+           die();
+    */}
    }
 
     void heal(){//healing function
      health++;
     }
+};
+
+class Puzzle{
+           private:
+           xy placement = 0, 0;
+           
+           public:
+           
+           xy get_placement(){
+                      return placement; 
+           }
+           
+           int get_x(){
+                      return placement.x;
+           }
+           
+           int get_y(){
+                      return placement.y;
+           }
+           
+           void set_placement(int new_x, int new_y){
+                      placement.x = new_x;
+                      placement.y = new_y;
+                      
+           }
 };
