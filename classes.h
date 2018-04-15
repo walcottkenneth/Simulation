@@ -128,6 +128,7 @@ class puzzle1 : public Puzzle{
                 Puzzle::damage();
                 cout << "That is incorrect. You lose one life point." << endl;
                 cout << "You have " << Puzzle::get_health() << " life points remaining." << endl;}
+            if (Puzzle::get_health() <= 0) die();
         }
         cout << "You have solved the puzzle." << endl;
     }
@@ -151,6 +152,7 @@ class puzzle2 : public Puzzle{
                 cout << "That is incorrect. You lose one life point." << endl;
                 cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
             }
+            if (Puzzle::get_health() <= 0) die();
         }
         cout << "You have solved the puzzle." << endl;
     }
@@ -174,6 +176,7 @@ class puzzle3 : public Puzzle{
                 cout << "That is incorrect. You lose one life point." << endl;
                 cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
             }
+            if (Puzzle::get_health() <= 0) die();
         }
         cout << "You have solved the puzzle." << endl;
     }
@@ -198,6 +201,7 @@ class puzzle4 : public Puzzle{
                 cout << "That is incorrect. You lose one life point." << endl;
                 cout << "You have " << Puzzle :: get_health() << " life points remaining." << endl;
             }
+            if (Puzzle::get_health() <= 0) die();
         }
         cout << "You have solved the puzzle." << endl;
     }
