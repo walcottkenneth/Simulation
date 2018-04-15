@@ -11,7 +11,7 @@ struct xy{//This is a struct for loaction. It puts x and y
 
 
 
-class Player(){//This class includes:
+class Player{//This class includes:
                // location struct, health, get/set location functions, and a damage function.
   private:
     xy location;
