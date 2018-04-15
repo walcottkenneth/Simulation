@@ -315,7 +315,7 @@ int main() {
             if (map.get_x() <= 5 && map.get_y() < 5) {
                 cout << "Go to Kerney's favorite place." << endl;
             }
-            if (map.get_x() > 5 && map.get_y() >= 5) {
+            if (map.get_x() > 5 && map.get_y() <= 5) {
                 cout << "Vist the year that is the title of the famous book written by George Orwell." << endl;
             }
             if (map.get_x() > 5 && map.get_y() > 5) {
