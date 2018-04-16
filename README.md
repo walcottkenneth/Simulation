@@ -2,6 +2,7 @@
 CSCI41 Simulation Project: Kamilah, Kenneth &amp; Kory
 
 Title: Lost in Los Angeles
+
 Theme: Your character is working there way through "Los Angeles", trying to find gems to undue a cure thats
 been placed on them. A psychic serves as a guide through the dilemma, which can be found in the intro of the
 game, along with in the paugh menu. The psychic gives hints towards jewels, congratulates success, and warns
@@ -25,3 +26,4 @@ the challenges they have to overcome.
 
 Alex: Front/Back End Developer
 Assist in all front and back coding and product development. 
+Create classes for puzzles.
