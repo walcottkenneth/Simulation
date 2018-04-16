@@ -1,5 +1,5 @@
 # Simulation
-CSCI41 Simulation Project: Kamilah, Kenneth &amp; Kory
+CSCI41 Simulation Project: Kamilah, Kenneth, Kory, & Alex
 
 Title: Lost in Los Angeles
 
