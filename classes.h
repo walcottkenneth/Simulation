@@ -165,3 +165,11 @@ class puzzle4 : public Puzzle{
         cout << "You have solved this puzzle." << endl;
     }
 };
+
+struct pcode{
+    string p = " ";
+    pcode* next = nullptr;
+    pcode(){}
+    pcode(string new_p): p(new_p){}
+    ~pcode(){}
+};
