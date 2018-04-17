@@ -73,6 +73,14 @@ class Puzzle{
     void heal(){health++;}
 };
 
+struct pcode{
+    string p = " ";
+    pcode* next = nullptr;
+    pcode(){}
+    pcode(string new_p): p(new_p){}
+    ~pcode(){}
+};
+
 class puzzle1 : public Puzzle{
     public:
     string answer;
@@ -85,6 +93,12 @@ class puzzle1 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
+                head = new pcode("23WESDXC");
+            }
+            else if(answer == "23WESDXC") {
+                win++;
+                solved = true;
+                cout << "Passcode accepted. You have found a crystal!\n";
             }
             else{
                 Puzzle::damage();
@@ -93,6 +107,7 @@ class puzzle1 : public Puzzle{
             if (health <= 0) die();
         }
         cout << "You have solved this puzzle." << endl;
+        cout << "Here is your passcode:" <<  " 23WESDXC" <<endl;
     }
 };
 
@@ -109,6 +124,12 @@ class puzzle2 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
+                insert(head, "RT56DFXC");
+            }
+            else if(answer == "RT56DFXC") {
+                win++;
+                solved = true;
+                cout << "Passcode accepted. You have found a crystal!\n";
             }
             else {
                 Puzzle:: damage();
@@ -118,6 +139,7 @@ class puzzle2 : public Puzzle{
             }
         }
         cout << "You have solved this puzzle." << endl;
+        cout << "Here is your passcode:" <<  " RT56DFXC" <<endl;
     }
 };
 
@@ -132,6 +154,12 @@ class puzzle3 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct.You have found a crystal!\n";
+                insert(head, "ZM10ALBG");
+            }
+            else if(answer == "ZM10ALBG") {
+                win++;
+                solved = true;
+                cout << "Passcode accepted. You have found a crystal!\n";
             }
             else {
                 Puzzle::damage();
@@ -141,6 +169,7 @@ class puzzle3 : public Puzzle{
             }
         }
         cout << "You have solved this puzzle." << endl;
+        cout << "Here is your passcode:" <<  " ZM10ALBG" <<endl;
     }
 };
 
@@ -156,6 +185,12 @@ class puzzle4 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
+                insert(head, "W2TVB3H7");
+            }
+            else if(answer == "W2TVB3H7") {
+                win++;
+                solved = true;
+                cout << "Passcode accepted. You have found a crystal!\n";
             }
             else {
                 Puzzle::damage();
@@ -165,14 +200,8 @@ class puzzle4 : public Puzzle{
             }
         }
         cout << "You have solved this puzzle." << endl;
+        cout << "Here is your passcode:" <<  " W2TVB3H7" <<endl;
     }
 };
 
-struct pcode{
-    string p = " ";
-    pcode* next = nullptr;
-    pcode(){}
-    pcode(string new_p): p(new_p){}
-    ~pcode(){}
-};
 #endif
