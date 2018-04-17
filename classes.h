@@ -119,7 +119,6 @@ class puzzle1 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
-                head = new pcode("23WESDXC");
             }
             else if(answer == "23WESDXC") {
                 win++;
@@ -150,7 +149,6 @@ class puzzle2 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
-                insert(head, "RT56DFXC");
             }
             else if(answer == "RT56DFXC") {
                 win++;
@@ -180,7 +178,6 @@ class puzzle3 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct.You have found a crystal!\n";
-                insert(head, "ZM10ALBG");
             }
             else if(answer == "ZM10ALBG") {
                 win++;
@@ -211,7 +208,6 @@ class puzzle4 : public Puzzle{
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
-                insert(head, "W2TVB3H7");
             }
             else if(answer == "W2TVB3H7") {
                 win++;
