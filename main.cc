@@ -92,15 +92,19 @@ int main() {
         }
         if (map.get_x() == 4 && map.get_y() == 2) {
             puzzle1.quiz();
+            head = new pcode("23WESDXC");
         }
         if (map.get_x() == 10 && map.get_y() == 10) {
             puzzle2.quiz();
+            insert(head, "RT56DFXC");
         }
         if (map.get_x() == 3 && map.get_y() == 6) {
             puzzle3.quiz();
+            insert(head, "ZM10ALBG");
         }
         if (map.get_x() == 8 && map.get_y() == 4) {
             puzzle4.quiz();
+            insert(head, "W2TVB3H7");
         }
         if (health <= 0) die();
         if (win == 4) break;
