@@ -1,3 +1,5 @@
+#ifndef CLASSES_H
+#define CLASSES_H
 #include <iostream>
 using namespace std;
 
@@ -173,3 +175,4 @@ struct pcode{
     pcode(string new_p): p(new_p){}
     ~pcode(){}
 };
+#endif
