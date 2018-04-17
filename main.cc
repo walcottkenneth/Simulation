@@ -67,6 +67,7 @@ int main() {
         cout << "Your coordinates are: (" << map.get_x() << ", " << map.get_y() << ")." << endl;
         cin >> c;
         if (!cin) die();
+        if (c == 'Q' || c == 'q') die();
         if (c == 'W' || c == 'w') map.i_y();
         if (c == 'A' || c == 'a') map.d_x();
         if (c == 'S' || c == 's') map.d_y();
