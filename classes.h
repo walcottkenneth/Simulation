@@ -81,32 +81,6 @@ struct pcode{
     ~pcode(){}
 };
 
-void insert(pcode* temp, string new_p) {
-    if(!temp) { temp = new pcode(new_p); }
-    else {
-        while(temp){
-            if(!temp->next) {
-                temp->next = new pcode(new_p);
-                break;
-            }
-            temp = temp->next;
-        }
-    }
-}
-void print(pcode* temp){
-    int i = 1;
-    if(!temp) { cout << "You currently have no passwords.\n"; }
-        else {
-            cout << "Your passcode list.\n";
-            while(temp) {
-                cout << i << ") " << temp->p << endl;
-                temp = temp->next;
-                i++;
-            }
-        }
-}
-
-
 class puzzle1 : public Puzzle{
     public:
     string answer;
