@@ -45,6 +45,7 @@ int main() {
     puzzle2 puzzle2;
     puzzle3 puzzle3;
     puzzle4 puzzle4;
+    pcode* head;
     
     string h    = "Keller";     //host
     string ft   = "Sabrina";    //fortune teller
@@ -84,6 +85,10 @@ int main() {
             if (map.get_x() > 5 && map.get_y() > 5) {
                 cout << ft << ": Go to the spot where in binary code it reads 'on off on off'." << endl;
             }
+            cout << "Would you like to see your passcodes(y/n).\n";
+            cin >> c;
+            if(c == 'Y' || c == 'y') { print(head); }
+            if(c == 'N' || c == 'n') { ; }
         }
         if (map.get_x() == 4 && map.get_y() == 2) {
             puzzle1.quiz();
