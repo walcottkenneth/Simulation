@@ -89,7 +89,7 @@ class puzzle1 : public Puzzle{
             cout << "Jimmy's mother had three children. The first was called April\n";
             cout << "and the second was called May. What was the name of the third?\n";
             cin >> answer;
-            if(answer == "JIMMY" || answer =="jimmy"){
+            if(answer == "JIMMY" || answer =="jimmy" || answer == "Jimmy"){
                 win++;
                 solved = true;
                 cout << "That is correct. You have found a crystal!\n";
